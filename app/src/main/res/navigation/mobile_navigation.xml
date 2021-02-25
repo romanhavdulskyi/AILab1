@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/mobile_navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.havdulskyi.ailab1.login.LoginFragment"
+        android:label="LoginFragment" />
+    <fragment
+        android:id="@+id/quizPageFragment"
+        android:name="com.havdulskyi.ailab1.quizPage.QuizPageFragment"
+        android:label="QuizPageFragment" >
+        <action
+            android:id="@+id/action_quizPageFragment_to_quizResultFragment"
+            app:destination="@id/quizResultFragment"
+            app:popUpTo="@id/quizChooseCategoryFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/quizResultFragment"
+        android:name="com.havdulskyi.ailab1.quizResult.QuizResultFragment"
+        android:label="QuizResultFragment" />
+    <fragment
+        android:id="@+id/quizChooseCategoryFragment"
+        android:name="com.havdulskyi.ailab1.quizChooseCategory.QuizChooseCategoryFragment"
+        android:label="QuizChooseCategoryFragment" />
+</navigation>
